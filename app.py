@@ -16,7 +16,7 @@ st.markdown("Ask any question about your data and get a natural language answer 
 data_folder = Path("data")
 data_folder.mkdir(exist_ok=True)
 
-# --- 📤 Upload Excel files ---
+#Files Upload
 st.sidebar.header("📁 Upload Excel Files")
 uploaded_files = st.sidebar.file_uploader(
     "Upload one or more Excel files (.xlsx)", type=["xlsx", "xls"], accept_multiple_files=True
@@ -31,7 +31,7 @@ if uploaded_files:
 
 st.markdown("---")
 
-# --- 💬 User query input ---
+# input
 user_query = st.text_input("💬 Ask your question:", placeholder="e.g., What is the top-selling product in January?")
 
 if st.button("Submit") and user_query:
